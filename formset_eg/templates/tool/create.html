@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建</title>
+</head>
+<body>
+    <h2>创建</h2>
+    <form action="" method="post" class="form">
+        {% csrf_token %}
+        {{tool_form.as_p}}
+<!--        {{detail_form.as_p}}-->
+        {{ notice_formset.as_p }}
+        {{ version_formset.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

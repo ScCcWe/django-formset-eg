@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    <h2>主页</h2>
+    <a href="{% url 'tool:create-page' %}">创建</a>
+ {# <a href="{% url 'tool:update-page' %}">更新</a> #}
+    <div>
+        {% for tool in tools %}
+        {{tool.name}}
+        {% endfor %}
+    </div>
+    <div>
+        {% for detail in details %}
+        {{detail.desc}}
+        {% endfor %}
+    </div>
+    <div>
+        {% for notice in notices %}
+        {{notice.notice}}
+        {% endfor %}
+    </div>
+    <div>
+        {% for version in versions %}
+        {{version.version}}
+        {% endfor %}
+    </div>
+</body>
+</html>
